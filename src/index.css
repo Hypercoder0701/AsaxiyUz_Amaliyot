@@ -1,0 +1,258 @@
+:root {
+  --primary-color: #008dff;
+  --primary-color-icons: #111111;
+  --primary-color-main: #007bff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+body {
+  width: 100%;
+  background-color: #007bff10;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: var(--primary-color);
+}
+
+.katalog:hover {
+  --primary-color: var(--primary-color-main);
+}
+.katalog {
+  padding: 8px 20px;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  color: white;
+}
+
+header {
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+header .span {
+  text-decoration: none;
+}
+
+.burger-wrapper {
+  cursor: pointer;
+}
+#menyAvPaa {
+  display: none;
+  text-decoration: none;
+}
+
+#menyAvPaa:checked ~ #meny {
+  transform: translateY(0rem);
+}
+
+#burger {
+  cursor: pointer;
+  width: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 4px;
+}
+
+#burger > div {
+  height: 1px;
+  background-color: white;
+  transition: 0.5s;
+  z-index: 999;
+}
+
+#menyAvPaa:checked ~ #burger > div:nth-child(1) {
+  transform: translateY(0) rotate(-45deg);
+}
+#menyAvPaa:checked ~ #burger > div:nth-child(2) {
+  display: none;
+}
+#menyAvPaa:checked ~ #burger > div:nth-child(3) {
+  transform: translateY(0) rotate(45deg);
+}
+#menyAvPaa:checked ~ #burger {
+  gap: 0px;
+  height: 2px;
+}
+.searchbar-container {
+  display: flex;
+  width: 40vw;
+  position: relative;
+}
+.searchbar-container input {
+  padding: 10px 10px;
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+.searchbar-container input:focus {
+  outline: none;
+}
+.searchbar-container button {
+  border: none;
+  background-color: var(--primary-color-main);
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  padding: 11px 12px;
+  position: absolute;
+  right: 0;
+  color: white;
+}
+
+.links-container {
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+  gap: 36px;
+}
+.links-container svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--primary-color-icons);
+  fill: white;
+}
+.fill-primary {
+  fill: var(--primary-color-icons);
+}
+
+.links-container span {
+  color: var(--primary-color-icons);
+}
+.icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.icons:hover {
+  cursor: pointer;
+  --primary-color-icons: var(--primary-color);
+}
+
+/* swipers */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+swiper-container {
+  border-radius: 20px;
+  overflow: hidden;
+  height: 100%;
+}
+
+.horizontal-swipers {
+  margin: 0 auto;
+  margin-top: 60px;
+  display: flex;
+  width: 80%;
+  height: 400px;
+  gap: 24px;
+}
+.first-horizontal-swiper {
+  position: relative;
+  width: 50%;
+  color: orange;
+  height: 100%;
+}
+.first-horizontal-swiper img {
+  width: 100%;
+  height: 100%;
+}
+.second-horizontal-swiper {
+  background-color: white;
+  padding: 20px;
+  width: 50%;
+  gap: 10px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.second-horizontal-swiper > span {
+  font-size: 16px;
+  font-weight: 700;
+}
+.second-horizontal-swiper swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.second-horizontal-swiper swiper-slide:hover {
+  cursor: pointer;
+}
+.second-horizontal-swiper img {
+  width: 200px;
+  height: 200px;
+}
+.description > span {
+  display: block;
+}
+.product-name {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+.product-name:hover {
+  --primary-color: var(--primary-color-main);
+}
+.product-price {
+  display: flex;
+  flex-direction: row;
+  padding: 0 12px;
+  justify-content: space-between;
+}
+.product-price .price {
+  font-weight: 400;
+  text-decoration: line-through;
+  color: #11111170;
+}
+.product-price span {
+  font-weight: 700;
+  color: red;
+  margin-bottom: 10px;
+}
+.product-deadline {
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  padding: 0 12px;
+  justify-content: space-between;
+  color: var(--primary-color);
+}
+.product-deadline img {
+  width: 12px;
+  height: 12px;
+}
+.description button {
+  border: none;
+  color: white;
+  width: 98%;
+  padding: 6px 0;
+  margin-top: 6px;
+  border-radius: 6px;
+}

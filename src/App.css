@@ -1,0 +1,10 @@
+.container {
+  position: relative;
+  padding: 28px 24px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  align-items: center;
+  background-color: white;
+  width: 100vw;
+}
